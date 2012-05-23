@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<user name="tom" age="20" gender="男" address="USA"/>
+	<user name="jim" age="22" gender="男" address="USA"/>
+	<user name="eric" age="21" gender="纯爷们" address="China"/>
+</resources>

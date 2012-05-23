@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textColor="@color/title"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/height" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:numeric="integer" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/weight" />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:numeric="decimal" />
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn" />
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="另一种结果显示方式" />
+            </TableRow>
+
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/readXml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="读取XML文件" />
+
+                <Button
+                    android:id="@+id/menuTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MenuTest" />
+            </TableRow>
+
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/layoutBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LinearLayoutTest" />
+
+                <Button
+                    android:id="@+id/frameTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FrameLayoutTest" />
+            </TableRow>
+
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/tableTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TableTest" />
+
+                <Button
+                    android:id="@+id/scrollviewBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="toScrollView"
+                    android:text="ScrollViewTest" />
+            </TableRow>
+
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/tabTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TabTest" />
+
+                <Button
+                    android:id="@+id/progressBarTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ProgBarTest" />
+            </TableRow>
+
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/listViewTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ListViewTest" />
+
+                <Button
+                    android:id="@+id/test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test" />
+            </TableRow>
+
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/expandableListTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expandable" />
+
+                <Button
+                    android:id="@+id/others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Others" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bmi_result" />
+
+        <TextView
+            android:id="@+id/suggest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bmi_suggest" />
+    </LinearLayout>
+
+</ScrollView>

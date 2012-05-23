@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+	<ProgressBar
+	android:id="@+id/progbar"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	style="?android:attr/progressBarStyleSmallTitle"></ProgressBar>
+	<TextView
+	android:id="@+id/tv01"
+	android:text="测试以下进度条好用不"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="#aa0000"/>
+	<Button
+	android:id="@+id/btn_showPro"
+	android:text="显示进度条"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"/>
+	<Button
+	android:id="@+id/btn_hidePro"
+	android:text="隐藏进度条"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"/>
+	<LinearLayout
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+		<Button
+		android:id="@+id/btn_cutPro"
+		android:text="减少"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+		<ProgressBar
+		android:id="@+id/increm_prog"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="150dip"
+		android:layout_height="wrap_content"
+		android:max="100"
+		android:progress="50"/>
+		<Button
+		android:id="@+id/btn_addPro"
+		android:text="增加"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+	</LinearLayout>
+</LinearLayout>

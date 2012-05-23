@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">想知道你的体形是否健康吗？</string>
+    <string name="world">试试BMI吧！</string>
+    <string name="app_name">MyBMI</string>
+    <string name="height">身高：</string>
+    <string name="weight">体重：</string>
+    <string name="bmi_result">结果：</string>
+    <string name="bmi_suggest">建议：</string>
+    <string name="btn">开始计算</string>
+    <string name="msg">神奇的弹出窗口！</string>
+    <string name="ok">知道了</string>
+    <string name="homepage">首页</string>
+    <string name="homouri">"http://www.hiapk.com/"</string>
+</resources>

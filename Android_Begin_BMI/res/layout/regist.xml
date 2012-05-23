@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+	<ProgressBar android:id="@+id/widget43"
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content"    
+      android:layout_gravity="center_vertical"
+      style="?android:attr/progressBarStyleSmallTitle">
+	</ProgressBar>
+
+	<TableLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:collapseColumns="3"
+	android:stretchColumns="1">
+		<TableRow
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+			<TextView
+			android:text="用户名："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<EditText
+			android:id="@+id/et_username"
+			android:text=""
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+		</TableRow>
+		<TableRow>
+			<TextView
+			android:text="密    码："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<EditText
+			android:id="@+id/et_password"
+			android:text=""
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:password="true"/>
+		</TableRow>
+		<TableRow>
+			<TextView
+			android:text="性    别："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<RadioGroup
+			android:id="@+id/gender_g"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+				<RadioButton
+				android:id="@+id/male"
+				android:text="男"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+				<TextView
+				android:text="    "
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+				<RadioButton
+				android:id="@+id/female"
+				android:text="女"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"/>
+			</RadioGroup>
+		</TableRow>
+		<TableRow>
+			<TextView
+			android:text="婚    否："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<ToggleButton
+			android:id="@+id/marriedTB"
+			android:text=""
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		</TableRow>
+		<TableRow>
+			<TextView
+			android:text="爱    好："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<CheckBox
+			android:id="@+id/reading"
+			android:text="阅读"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<CheckBox
+			android:id="@+id/swimming"
+			android:text="游泳"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		</TableRow>
+		<TableRow>
+			<TextView
+			android:text="职    务："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<Spinner
+			android:id="@+id/position"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		</TableRow>
+		<TableRow>
+			<TextView
+			android:text="地    址："
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<AutoCompleteTextView
+			android:id="@+id/address"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		</TableRow>
+		<TableRow>
+			<Button
+			android:id="@+id/cancel"
+			android:text="取消"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			<Button
+			android:id="@+id/regist"
+			android:text="注册"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

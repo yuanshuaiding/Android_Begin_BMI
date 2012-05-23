@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="light">你得多吃肉！</string>
+	<string name="heavy">把肉都给我！</string>
+	<string name="average">肉留着自己吃吧！</string>
+</resources>
