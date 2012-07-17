@@ -1,6 +1,7 @@
 package com.fykj.gpc.bmi;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -28,6 +29,12 @@ public class Regist extends Activity {
         //¥¥Ω®  ≈‰∆˜
         ArrayAdapter<String> adp=new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, addrs);
         autotxt.setAdapter(adp);
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		
 	}
 	
 }

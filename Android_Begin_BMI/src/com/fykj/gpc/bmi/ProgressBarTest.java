@@ -139,9 +139,10 @@ public class ProgressBarTest extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				dialog_downImg = ProgressDialog.show(ProgressBarTest.this, "异步加载网络图片",
-						"下载数据，请稍等 …", true, true);
-				new DownFileThread2().execute("");
+				//图片的网络地址
+				String urlStr="http://pic4.nipic.com/20091123/3789763_143553026583_2.jpg";
+				//执行异步任务
+				new DownFileThread2().execute(urlStr);
 			}
 		});
 
@@ -219,11 +220,19 @@ public class ProgressBarTest extends Activity {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
 		}
 	};
 
 	private class DownFileThread2 extends AsyncTask<String, Integer, Bitmap> {
+		
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			dialog_downImg = ProgressDialog.show(ProgressBarTest.this, "异步加载网络图片",
+					"下载数据，请稍等 …", true, true);
+			
+		}
 
 		@Override
 		protected Bitmap doInBackground(String... params) {
@@ -251,6 +260,7 @@ public class ProgressBarTest extends Activity {
 		@Override
 		protected void onPostExecute(Bitmap result) {
 			super.onPostExecute(result);
+			dialog_downImg.dismiss();
 			img_fromnet.setImageBitmap(result);
 		}
 		

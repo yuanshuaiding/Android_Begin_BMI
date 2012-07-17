@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,13 +18,19 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 
 public class Bmi extends Activity {
+	private static final String BMIACTION="com.fykj.gpc.bmi.ACTION";
     private TextView feildHeight,feildWeight,result;
     private Button btn,next,readXml,menuTest,layoutBtn,frameTest,
     			   tableTest,scrollviewBtn,tabTest,progBarBtn,listViewTest,listViewActivity;
 	private Button expandableTest;
+	private Button preferenceTest;
+	private View btn_drawview;
+	private View btn_intent;
+	private View btn_actiondata;
 	
 	/** Called when the activity is first created. */
     @Override
@@ -50,6 +57,12 @@ public class Bmi extends Activity {
     	listViewTest=(Button)findViewById(R.id.listViewTest);
     	listViewActivity=(Button)findViewById(R.id.test);
     	expandableTest=(Button)findViewById(R.id.expandableListTest);
+    	preferenceTest=(Button)findViewById(R.id.preferenceTest);
+    	btn_drawview=findViewById(R.id.btn_drawview);
+    	//测试intent与action,category配置
+    	btn_intent=findViewById(R.id.btn_intent);
+    	//测试action与data组合启动系统Activity
+    	btn_actiondata=findViewById(R.id.btn_actiondata);
     }
 
 	private void setListeners() {
@@ -66,6 +79,46 @@ public class Bmi extends Activity {
         listViewTest.setOnClickListener(toListViewTest);
         listViewActivity.setOnClickListener(toListActivity);
         expandableTest.setOnClickListener(expandableTestListener);
+        preferenceTest.setOnClickListener(prefereceListener);
+        btn_drawview.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent it=new Intent();
+				it.setClass(getApplicationContext(), ViewFollowFinger.class);
+				startActivity(it);
+			}
+		});
+        btn_intent.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent it=new Intent();
+				//该Intent会启动<intent-filter>中配置好该action的组件
+				it.setAction(BMIACTION);
+				//设置Category属性，注意要在<intent-filter>中配置该Category属性值，否则会无法启动目标组件
+				it.addCategory("com.fykj.gpc.bmi.CATEGORY");
+				startActivity(it);
+			}
+		});
+        btn_actiondata.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+
+				Intent it=new Intent();
+				//查看所有联系人的action
+				//it.setAction(Intent.ACTION_VIEW);
+				//it.setData(Uri.parse("content://contacts/people/"));
+				//在联系人姓名列表里选择联系人的action
+				//it.setAction(Intent.ACTION_PICK);
+				//it.setData(ContactsContract.Contacts.CONTENT_URI);
+				//借助Type属性在联系人信息列表里选择联系人的方法
+				it.setAction(Intent.ACTION_GET_CONTENT);
+				it.setType("vnd.android.cursor.item/phone");
+				startActivity(it);
+			}
+		});
 	}
 
     
@@ -298,6 +351,16 @@ public class Bmi extends Activity {
 										})
 										.show();*/
 	}
+	
+	private OnClickListener prefereceListener=new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			Intent it=new Intent();
+			it.setClass(getApplicationContext(), PreferenceActivityTest.class);
+			startActivity(it);
+		}
+	};
 
 	protected void openShortDialog() {
 		// TODO Auto-generated method stub

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 设置系统铃声 -->
+    <RingtonePreference android:ringtoneType="all"
+        android:title="设置铃声"
+        android:summary="选择铃声测试"
+        android:showDefault="true"
+        android:showSilent="true"
+        android:key="ring"/>
+    
+    <PreferenceCategory android:title="用户设置">
+        <EditTextPreference android:key="name" android:summary="请输入你的用户名" android:title="用户名"/>
+        <ListPreference android:summary="请选择你的性别" android:title="性别" android:key="gender"/>
+    </PreferenceCategory>
+    
+</PreferenceScreen>
