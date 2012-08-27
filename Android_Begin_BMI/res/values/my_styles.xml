@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="style_button">
+	    <item name="android:background">#4682B4</item>
+		<item name="android:textColor">#E8E8E8</item>
+		<item name="android:height">45dp</item>
+	</style>
+	<style name="style_window">
+	    <item name="android:windowNoTitle">true</item>
+	    <item name="android:windowFullscreen">true</item>
+	    <item name="android:windowFrame">@drawable/window_boder</item>
+	</style>
+</resources>

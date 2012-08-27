@@ -3,8 +3,10 @@
     package="com.fykj.gpc.bmi"
     android:versionCode="1"
     android:versionName="1.0" >
-	<uses-permission android:name="android.permission.INTERNET"/>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:icon="@drawable/icon1"
         android:label="@string/app_name" >
@@ -62,25 +64,38 @@
             android:name=".ExpandableTest"
             android:label="ExpandableList" >
         </activity>
-        <activity 
+        <activity
+            android:name=".MySeekBarTest"
+            android:label="MySeekBarTest" >
+        </activity>
+        <activity
             android:name=".PreferenceActivityTest"
-            android:label="PreferenceActivityTest">
+            android:label="PreferenceActivityTest" >
         </activity>
-         <activity 
+        <activity
             android:name=".ViewFollowFinger"
-            android:label="DrawView">
+            android:label="DrawView" >
         </activity>
-        <activity 
+        <activity
             android:name=".IntentTest"
-            android:label="IntentTest">
+            android:label="IntentTest" >
             <intent-filter>
                 <action android:name="com.fykj.gpc.bmi.ACTION" />
                 <!-- 该categroy必须配置，否则会无法启动IntentTest组件 -->
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT" />
                 <!-- 这是自定义的categroy属性 -->
                 <category android:name="com.fykj.gpc.bmi.CATEGORY" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ClipDrawableTest"
+            android:label="ClipDrawableTest" >
+        </activity>
+        <!-- 该Activity使用了主题资源 -->
+        <activity
+            android:name=".AttributesDemo"
+            android:label="AttributesDemo"
+            android:theme="@style/style_window"></activity>
     </application>
 
     <uses-sdk android:minSdkVersion="8" />

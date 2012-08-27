@@ -31,6 +31,9 @@ public class Bmi extends Activity {
 	private View btn_drawview;
 	private View btn_intent;
 	private View btn_actiondata;
+	private View btn_myseekbar;
+	private View btn_clipdraw;
+	private View btn_attribute;
 	
 	/** Called when the activity is first created. */
     @Override
@@ -63,6 +66,11 @@ public class Bmi extends Activity {
     	btn_intent=findViewById(R.id.btn_intent);
     	//测试action与data组合启动系统Activity
     	btn_actiondata=findViewById(R.id.btn_actiondata);
+    	//测试自定义的SeekBar
+    	btn_myseekbar=findViewById(R.id.btn_seekbar);
+    	//测试ClipDrawable
+    	btn_clipdraw=findViewById(R.id.btn_clipdraw);
+    	btn_attribute=findViewById(R.id.btn_attribute);
     }
 
 	private void setListeners() {
@@ -119,6 +127,31 @@ public class Bmi extends Activity {
 				startActivity(it);
 			}
 		});
+        btn_myseekbar.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent();
+				intent.setClass(getApplicationContext(), MySeekBarTest.class);
+				startActivity(intent);
+			}
+		});
+        btn_clipdraw.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent it=new Intent(getApplicationContext(),ClipDrawableTest.class);
+				startActivity(it);
+			}
+		});
+        btn_attribute.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent it=new Intent(getApplicationContext(),AttributesDemo.class);
+				startActivity(it);
+			}
+		});
 	}
 
     
@@ -128,7 +161,6 @@ public class Bmi extends Activity {
     //用于创建按menu键后弹出的菜单
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-    	// TODO Auto-generated method stub
     	super.onCreateOptionsMenu(menu);
     	//menu.setQwertyMode(false);
     	menu.add(0,MENU_ABOUT,0,"关于...");
@@ -139,7 +171,6 @@ public class Bmi extends Activity {
   //用于创建按menu键后弹出的菜单所对应的点击后的处理方法
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-    	// TODO Auto-generated method stub
     	switch(item.getItemId()){
     		case MENU_ABOUT:
     			openAboutDialog();
@@ -179,7 +210,6 @@ public class Bmi extends Activity {
     private Button.OnClickListener toReadView=new Button.OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
 			Intent in=new Intent();
 			in.setClass(Bmi.this, XmlTest.class);
 			startActivity(in);
@@ -188,7 +218,6 @@ public class Bmi extends Activity {
 	private Button.OnClickListener toMenuTest=new Button.OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
 			Intent in=new Intent();
 			in.setClass(Bmi.this, MenuTest.class);
 			startActivity(in);
@@ -311,7 +340,6 @@ public class Bmi extends Activity {
 			
 			@Override
 			public void onClick(DialogInterface arg0, int index) {
-				// TODO Auto-generated method stub
 				//Toast.makeText(Bmi.this, arg0.toString(), 2).show();
 				System.out.println(index);
 				switch(index){
@@ -363,7 +391,6 @@ public class Bmi extends Activity {
 	};
 
 	protected void openShortDialog() {
-		// TODO Auto-generated method stub
 		Toast.makeText(Bmi.this, "我很快消失哦！", Toast.LENGTH_SHORT).show();
 	}
     
