@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="圆形渐变"
+        android:background="@drawable/selector_btn" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/button1"
+        android:text="线性渐变" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button1"
+        android:text="角度渐变" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/button2"
+        android:background="@drawable/selector_btn"
+        android:padding="1dp"
+        android:text="位图"
+        android:width="50dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button3"
+        android:background="@drawable/selector_btn"
+        android:text="混合" />
+
+    <com.fykj.gpc.bmi.mywidgets.ShaderView
+        android:id="@+id/shaderView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

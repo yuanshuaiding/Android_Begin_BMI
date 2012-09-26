@@ -10,4 +10,9 @@
 	    <item name="android:windowFullscreen">true</item>
 	    <item name="android:windowFrame">@drawable/window_boder</item>
 	</style>
+	<style name="my_button">
+	    <item name="android:background">#87CEFF</item>
+	    <item name="android:textColor">#F8F8FF</item>
+	    <item name="android:textSize">25sp</item>
+	</style>
 </resources>

@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:icon="@drawable/icon1"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
             android:name=".Bmi"
@@ -95,7 +95,36 @@
         <activity
             android:name=".AttributesDemo"
             android:label="AttributesDemo"
-            android:theme="@style/style_window"></activity>
+            android:theme="@style/style_window" >
+        </activity>
+        <activity
+            android:name=".OriginalResTest"
+            android:label="OriginalResTest" >
+        </activity>
+        <activity
+            android:name=".CanvasActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".MatrixTest"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".MoveView"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".MeshImageTest"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".ShaderTest"
+            android:label="ShaderTest" >
+        </activity>
+        <activity
+            android:name=".FrameAnimation"
+            android:label="FrameAnimationTest" >
+        </activity>
     </application>
 
     <uses-sdk android:minSdkVersion="8" />

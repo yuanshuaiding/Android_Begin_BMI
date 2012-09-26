@@ -194,6 +194,69 @@
                     android:text="AttributesTest" />
 
             </TableRow>
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/btn_originalRes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OriginalResTest" 
+                    android:onClick="originalTest"/>
+
+                <Button
+                    android:id="@+id/btn_canvas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CanvasTest" />
+
+            </TableRow>
+             <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/btn_matrix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MatrixTest" />
+
+                <Button
+                    android:id="@+id/btn_moveview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MoveView"
+                    android:onClick="moveView" />
+
+            </TableRow>
+            <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/btn_meshimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MeshImage"
+                    android:onClick="meshImage" />
+
+                <Button
+                    android:id="@+id/btn_shader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ShaderTest" />
+
+            </TableRow>
+             <TableRow android:gravity="center" >
+
+                <Button
+                    android:id="@+id/btn_frameanim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FrameAnim"/>
+
+                <Button
+                    android:id="@+id/btn_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test" />
+
+            </TableRow>
         </TableLayout>
 
         <TextView
